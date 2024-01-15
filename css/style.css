@@ -1,3 +1,13 @@
-h1{
-    align-items: center;
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #163811;
+    color: white;
+    align-content: center;
+    margin: 2fr;
+}
+main{
+    background-color: #2e7224;
 }
