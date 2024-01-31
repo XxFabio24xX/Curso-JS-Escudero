@@ -89,3 +89,5 @@ let salidaSubTotal = "Subtotal: $" + carrito.calcularTotalPagar();
 let salidaDescuento = "Descuento: $" + carrito.aplicarDescuento();
 let montoFinal = "Total: $" + Math.round(carrito.calcularTotalPagar() - carrito.aplicarDescuento());
 alert(productosCarrito + "\n" + salidaSubTotal + "\n" + salidaDescuento + "\n" + montoFinal);
+
+alert("Muchas gracias "+nombreYapellido+" por visitar nuestra pagina")
