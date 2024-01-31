@@ -75,7 +75,7 @@ const carrito = new Carrito();
 let opcionSeleccionada = 1;
 
 while (opcionSeleccionada != 0) {
-    opcionSeleccionada = parseInt(prompt("Seleccione el auto que desee agregar al Carrito:\nEl valor equivale a la renta del vehiculo por 1 dia.\n0 - Para salir \n" + listarProductos()));
+    opcionSeleccionada = parseInt(prompt("Seleccione el auto que desee agregar al Carrito:\nEl valor equivale a la renta del vehiculo por 1 dia.\n" + listarProductos()+"0 - Para Finalizar el pedido"));
 
     if (opcionSeleccionada == 0) {
         break;
