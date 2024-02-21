@@ -47,6 +47,27 @@ const eliminarCarrito = () => {
     notificacion("Carrito Eliminado!");
 }
 
+const confirmacionEliminarCarrito = () => {
+    Swal.fire({
+        title: "Estas seguro?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, Eliminar!",
+        cancelButtonText: "Cancelar"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            eliminarCarrito();
+          Swal.fire({
+            title: "Eliminado!",
+            text: "Su carrito ha sido eliminado.",
+            icon: "success"
+          });
+        }
+      });
+}
+
 const verProducto = (id) => {
     localStorage.setItem("producto", JSON.stringify(id));
 }
@@ -87,11 +108,12 @@ const finalizarCompra = () => {
         text: "El total a pagar es $" + sumaTotalProductos() + " pesos.",
         imageUrl: "https://cochesdemetal.es/img/coches-de-metal-logo-1523440260.jpg",
         imageWidth: 160,
-        imageAlt: "Burger King",
+        imageAlt: "Coches de Metal",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Aceptar"
+        confirmButtonText: "Aceptar",
+        cancelButtonText: "Volver a la tienda"
         }).then((result) => {
             if (result.isConfirmed) {
                 eliminarCarrito();

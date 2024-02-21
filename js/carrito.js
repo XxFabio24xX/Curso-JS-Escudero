@@ -6,7 +6,7 @@ function renderCarrito() {
         contenido = `<table>
         <tbody>
         <tr>
-        <td colspan='4' class="text-end"><button class="btn btn-sm eliminar" onclick="eliminarCarrito()" title="Eliminar Carrito">Eliminar Carrito [X]</button></td>
+        <td colspan='4' class="text-end"><button class="btn btn-sm btn-danger" onclick="confirmacionEliminarCarrito()" title="Eliminar Carrito">Eliminar Carrito [X]</button></td>
         </tr>`;
 
         for (const producto of carrito) {
@@ -14,14 +14,14 @@ function renderCarrito() {
             <td class="text-start"><img src="${producto.imagen}" alt="${producto.nombre}" width="200" /></td>
             <td class="text-start">${producto.nombre}</td>
             <td class="text-start"><b>$${producto.precio}</b></td>
-            <td class="text-end"><button class="btn btn-sm eliminar" onclick="eliminarProductoCarrito(${producto.id})" title="Eliminar Producto"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbJJREFUSEuNVdthAzEIE5s0m1xG6SQdpaMko9wmbmywLQy+a36S+AFCSFhAHwFQLhd4E9idb+u2Wb/8yXArCXoTWVAGUE2QoLYYByC/QPkK53ThBPAN4D2BcnaBzHJS6K/P5SO/PAo/AXk0comWTrWrgLkzxO2cANI5XSpJ48wz0nLah9OPamaAvDfFUEegFJVBORHpRhI5oWI5OhJqD+auIdoHvam4ARIU6TEjRRrBcbuAyATlZU8nrhM0MClJq7aLab/qweEjo2k0g7Kqw/5XRtvPZb+KrJlrSaDpMs8Xi9H2a1RNzAmGqFvC2fesgsBq7VG3QOzJXQXbUUGu1pKtBzFgGDVbUZBMHVN0oWUpJjvtwYTYRfIfFTmeXILaAjOdWOyLJsfhnIxrVoX1QHs3EA9D6fr0Fac2iftppI2IKuolaEO6Oyjh0KObMG5IEUkO0c7JJMjtVHVGI2BrBf4p5XZZxdNoC+PeFsMxLwEOlob7bWyQ82tz3kXwdAJuOl8Gk3FzfKT5U/prlo03tyYnUMbT6UCHCuwimW4ZXvNBD6M7zJ3+Jt8g3NC4uTWnUqXrD+Ah3iFxXZk7AAAAAElFTkSuQmCC"" alt="Eliminar Producto" width="16" /></button></td>
+            <td class="text-end"><button class="btn btn-sm btn-danger" onclick="eliminarProductoCarrito(${producto.id})" title="Eliminar Producto"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAdhJREFUSEuNVet5wzAI5DRJu0k6SibpKB2lGSWTmBSEBAjZjf/YH0aCu+MBkgdExPOlJreDQCy/o2v8Xc7adXqxfG8eu1Q93T07buwb/5MA/SpmvhHRDxF9KITkLajwBNMdrT0iyox+D2EE+CWiW7xbv81gryfQPpWn+ATaT5HzwSxZA7DcMy3MrOKgNZQAQ7PCZOBxBGiAJt1Fc8E1gFhnAtVHUxs6jgMZUiH/nFRz1YQGRbGkDj7UrgKvml5olb2ZAKHMynpHkVKzQo+OS99kqiKNJ31wfcA1GFkyH9qmaMDke1dFQw9BIBCESznYL3AxV3H3Yg/BN9yuCP4PYAgsIS/ZRJFzt81Q6733w/g/yjdTNNT1+VYwzADKqV0YGqr3h1eL+DultW9zSMtQD1gAkURS7+XHE4E2mFguqm477LYaRARLB0+KUkdbH9gESGN5PaAITAPJ6IgUFQRx1Atq69peVF1/CSBTrpcpkVPUDT2Ala0G2FSR1XygyEOtIp8NxDH4VkrjinsrQBnzMzvWxs2N+V6Z6qJJE69snTIVHwC+8mYfjbZwIKvyr/y/IUHmwKkr03coP5lwb8Bj+p9utIgwLov4XVqzqORxzn/tF8BlHK/5meYLajVWMARphpQAAAAASUVORK5CYII=" alt="Eliminar Producto" width="16" /></button></td>
             </tr>`;
         }
 
         contenido += `<tr>
         <td class="text-center" colspan='2'>Total a Pagar</td>
         <td><b>$${sumaTotalProductos()}</b></td>
-        <td class="text-end"><button class="btn btn-compra btn-sm" onclick="finalizarCompra()" title="Finalizar Compra"><b>Finalizar Compra</b></button></td>
+        <td class="text-end"><button class="btn btn-success btn-sm" onclick="finalizarCompra()" title="Finalizar Compra"><b>Finalizar Compra</b></button></td>
         </tr>
         </tbody>
         </table>`;

@@ -15,7 +15,7 @@ function renderProducto() {
         <p>Escala ${producto.escala}</p>
         <p class="texto-descripcion">${producto.descripcion}</p>
         <p>$${producto.precio}</p>
-        <p><button class="btn btn-compra" onclick="agregarProductoCarrito()">(+) Agregar</button></p> 
+        <p><button class="btn btn-success" onclick="agregarProductoCarrito()">(+) Agregar</button></p> 
     </div>`;
 
     document.getElementById("producto").innerHTML = contenido;

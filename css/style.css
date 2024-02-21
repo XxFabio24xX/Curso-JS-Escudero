@@ -29,10 +29,5 @@ main{
         font-size: 20px;
         padding-top: 1rem;
     }
-    .eliminar{
-        background-color: #ff3c3c;
-    }
-    .btn-compra{
-        background-color: #628762;
-    }
+    
 }
