@@ -17,3 +17,4 @@ function renderProductos() {
 }
 
 renderProductos();
+renderBotonCarrito();

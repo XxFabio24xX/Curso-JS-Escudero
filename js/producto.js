@@ -1,5 +1,5 @@
 function renderProducto() {
-    const producto = obtenerProductoLS();
+    const producto = buscarProducto();
     let contenido = `
     <div class="row text-center p-4">
         <h1>${producto.nombre}</h1>
@@ -14,10 +14,12 @@ function renderProducto() {
         <p>Color: ${producto.color}</p>
         <p>Escala ${producto.escala}</p>
         <p class="texto-descripcion">${producto.descripcion}</p>
-        <p>$${producto.precio}</p> 
+        <p>$${producto.precio}</p>
+        <p><button class="btn btn-compra" onclick="agregarProductoCarrito()">(+) Agregar</button></p> 
     </div>`;
 
     document.getElementById("producto").innerHTML = contenido;
 }
 
 renderProducto();
+renderBotonCarrito();
