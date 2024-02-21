@@ -44,7 +44,6 @@ const eliminarCarrito = () => {
     localStorage.removeItem("carrito");
     renderCarrito();
     renderBotonCarrito();
-    notificacion("Carrito Eliminado!");
 }
 
 const confirmacionEliminarCarrito = () => {
@@ -64,6 +63,7 @@ const confirmacionEliminarCarrito = () => {
             text: "Su carrito ha sido eliminado.",
             icon: "success"
           });
+          notificacion("Carrito Eliminado!");
         }
       });
 }
@@ -117,6 +117,7 @@ const finalizarCompra = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 eliminarCarrito();
+                notificacion("Gracias por su compra!");
             }
         });
 }
